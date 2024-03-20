@@ -1,6 +1,7 @@
 version: '3.1'
 services:
   mongodb:
+    container_name: mongo
     image: mongo
     ports:
       - 27017:27017
@@ -9,6 +10,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
 
   mongo-express:
+    container_name: mongo-express
     image: mongo-express
     ports:
       - 8081:8081
